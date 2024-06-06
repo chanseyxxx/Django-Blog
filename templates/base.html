@@ -1,30 +1,36 @@
 {% load static %}
 <html>
-<head>
-<title>Django blog</title>
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
-<link href="{% static 'css/base.css' %}" rel="stylesheet">
-</head>
-<body>
-<div>
-<header>
-<div class="nav-left">
-<h1><a href="{% url 'home' %}">Django blog</a></h1>
-</div>
-<div class="nav-right">
-<a href="{% url 'post_new' %}">+ New Blog Post</a>
-</div>
-</header>
-{% if user.is_authenticated %}
-<p>Hi {{ user.username }}!</p>
-<p><a href="{% url 'logout' %}">Log out</a></p>
-{% else %}
-<p>You are not logged in.</p>
-<a href="{% url 'login' %}">Log In</a>
-<a href="{% url 'signup' %}">Sign Up</a>
-{% endif %}
-{% block content %}
-{% endblock %}
-</div>
-</body>
+    <head>
+        <title>Blog</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+    <body>
+    <div>
+    <header>
+    <div class="nav-left">
+    <h1><a href="{% url 'home' %}">Blog</a></h1>
+    </div>
+    <div class="nav-right">
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}" class="botao">Log out</a>
+    {% else %}
+    <a href="{% url 'login' %}" class="botao">Log In</a>
+    <a href="{% url 'signup' %}" class="botao">Sign Up</a>
+    {% endif %}
+    </div>
+    </header>
+    {% if user.is_authenticated %}
+    <div id="newpost">
+        <p>Hi {{ user.username }}!</p>
+        <a href="{% url 'post_new' %}" class="botao2">+ New Blog Post </a>
+    </div>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+    </div>
+    </body>
 </html>

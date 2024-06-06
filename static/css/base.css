@@ -1,40 +1,90 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  border-bottom: 1px solid #999;
+  margin-bottom: 2rem;
+  display: flex;
+  position: relative;
+}
+
+header h1 a {
+  color: pink;
+  text-decoration: none;
+}
+
+.nav-left {
+  margin-right: auto;
+}
+
+.nav-rigth {
+  position: absolute ;
+}
+.post-entry {
+  margin-bottom: 2rem;
+}
+
+.post-entry h2 {
+  margin: 0.5rem 0;
+}
+
+.post-entry h2 a,
+.post-entry h2 a:visited {
+  color: pink;
+  text-decoration: none;
+}
+
+.post-entry p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.post-entry h2 a:hover {
+  color: rgb(86, 129, 143);
+}
+
+.botao {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: lightblue; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 15px; /* Arredonda as bordas */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+.botao2 {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 10px 10px;
+  background-color: lightblue; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 15px; /* Arredonda as bordas */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 
-    body {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 18px;
-        }
-        header {
-        border-bottom: 1px solid #999;
-        margin-bottom: 2rem;
-        display: flex;
-        }
-        header h1 a {
-        color: pink;
-        text-decoration: none;
-        }
-        .nav-left {
-        margin-right: auto;
-        }
-        .nav-right {
-        display: flex;
-        padding-top: 2rem;
-        }
-        .post-entry {
-        margin-bottom: 2rem;
-        }
-        .post-entry h2 {
-        margin: 0.5rem 0;
-        }
-        .post-entry h2 a,
-        .post-entry h2 a:visited {
-        color: lightblue;
-        text-decoration: none;
-        }
-        .post-entry p {
-        margin: 0;
-        font-weight: 400;
-        }
-        .post-entry h2 a:hover {
-        color: rgb(86, 129, 143);
-        }
+#newpost {
+  margin-top: 100px;
+  width: 300px; /* largura desejada da div */  
+  margin: 0 auto; /* margens automáticas horizontalmente */
+}
+
+.botao:hover {
+  background-color: pink; /* Nova cor de fundo ao passar o mouse */
+}
+.botao2:hover {
+  background-color: pink; /* Nova cor de fundo ao passar o mouse */
+}
