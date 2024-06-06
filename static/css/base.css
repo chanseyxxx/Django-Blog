@@ -1,90 +1,85 @@
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: light;
+  font-variation-settings:
+  "wdth" 100;
+  
+}
+
+.nav-left h1 a{
+  font-family: "Kaisei Decol", serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: bold;
+  text-decoration: none; /* Remover sublinhado padrão de links */
+  cursor: pointer; /* Altera o cursor ao passar por cima do botão */
+  color: #000000; /* Cor do texto preta */
+  cursor: pointer; /* Altera o cursor ao passar por cima do botão */
+  
+}
+
+.nav-right{
+  
+  display: flex;
+  align-items: center; 
+}
+
+
+.botao {
+  background-color: #ffffff; /* Cor de fundo branca */
+  color: #000000; /* Cor do texto preta */
+  border: 2px solid #000000; /* Borda preta com 1px de espessura */
+  padding: 5px 40px; /* Espaçamento interno */
+  text-decoration: none; /* Remover sublinhado padrão de links */
+  cursor: pointer; /* Altera o cursor ao passar por cima do botão */
+  margin-left: 10px; /* Adiciona um espaçamento entre os botões */
+  
+}
+
+/* Estilo quando o mouse passa por cima do botão */
+.botao:hover {
+  background-color: #f0f0f0; /* Cor de fundo levemente mais clara */
 }
 
 header {
-  border-bottom: 1px solid #999;
-  margin-bottom: 2rem;
   display: flex;
-  position: relative;
+  align-items: center; /* Centraliza verticalmente os elementos dentro do header */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  margin-bottom: 10px;
 }
 
-header h1 a {
-  color: pink;
-  text-decoration: none;
+#meio {
+  background-color: #D9D9D9;
+  overflow: hidden; /* Para limpar floats */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 450px;
+  padding: 30px 30px; /* Espaçamento interno */
 }
 
-.nav-left {
-  margin-right: auto;
+#direita{
+  float: right;
+  text-align: right;
+  width: 500%;
+  
 }
 
-.nav-rigth {
-  position: absolute ;
-}
-.post-entry {
-  margin-bottom: 2rem;
-}
-
-.post-entry h2 {
-  margin: 0.5rem 0;
+#direita img {
+  object-fit: fill;
+  width: 80%;
+  height: auto; /* Ajusta automaticamente a altura para manter a proporção */
 }
 
-.post-entry h2 a,
-.post-entry h2 a:visited {
-  color: pink;
-  text-decoration: none;
+#esquerda{
+  float: left;
+  text-align: left;
 }
 
-.post-entry p {
-  margin: 0;
+#esquerda h2{
+  font-family: "Kaisei Decol", serif;
   font-weight: 400;
-}
-
-.post-entry h2 a:hover {
-  color: rgb(86, 129, 143);
-}
-
-.botao {
-  display: inline-block;
-  padding: 10px 10px;
-  background-color: lightblue; /* Cor de fundo do botão */
-  color: #fff; /* Cor do texto do botão */
-  text-decoration: none; /* Remove o sublinhado do link */
-  border-radius: 15px; /* Arredonda as bordas */
-  border: none; /* Remove a borda */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  margin-top: 20px;
-  margin-right: 15px;
-}
-
-.botao2 {
-  display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  padding: 10px 10px;
-  background-color: lightblue; /* Cor de fundo do botão */
-  color: #fff; /* Cor do texto do botão */
-  text-decoration: none; /* Remove o sublinhado do link */
-  border-radius: 15px; /* Arredonda as bordas */
-  border: none; /* Remove a borda */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  margin-top: 10px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-
-#newpost {
-  margin-top: 100px;
-  width: 300px; /* largura desejada da div */  
-  margin: 0 auto; /* margens automáticas horizontalmente */
-}
-
-.botao:hover {
-  background-color: pink; /* Nova cor de fundo ao passar o mouse */
-}
-.botao2:hover {
-  background-color: pink; /* Nova cor de fundo ao passar o mouse */
+  font-style: bold;
+  font-size: 55px;
 }
