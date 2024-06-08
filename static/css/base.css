@@ -5,15 +5,16 @@ body {
   font-style: light;
   font-variation-settings:
   "wdth" 100;
-  
+  margin: 20px;
 }
+
 
 .nav-left h1 a{
   font-family: "Kaisei Decol", serif;
   font-weight: 400;
   font-style: bold;
-  text-decoration: none; /* Remover sublinhado padrão de links */
   cursor: pointer; /* Altera o cursor ao passar por cima do botão */
+  text-decoration: none; /* Remover sublinhado padrão de links */
   color: #000000; /* Cor do texto preta */
   cursor: pointer; /* Altera o cursor ao passar por cima do botão */
   
@@ -49,6 +50,29 @@ header {
   margin-bottom: 10px;
 }
 
+.posts {
+  margin-top: 50px;
+  text-align: center; /* Para centralizar horizontalmente */
+}
+
+.posts h2{
+  font-family: "Kaisei Decol", serif;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 55px;
+  margin-bottom: 5px;
+}
+
+.posts p {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: light;
+  font-variation-settings:
+  "wdth" 100;
+}
+
+
 #meio {
   background-color: #D9D9D9;
   overflow: hidden; /* Para limpar floats */
@@ -56,7 +80,7 @@ header {
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   align-items: center; /* Centraliza o conteúdo verticalmente */
   height: 450px;
-  padding: 30px 30px; /* Espaçamento interno */
+  padding: 50px 50px; /* Espaçamento interno */
 }
 
 #direita{
@@ -75,11 +99,48 @@ header {
 #esquerda{
   float: left;
   text-align: left;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
 #esquerda h2{
+  margin-top: 5px;
   font-family: "Kaisei Decol", serif;
   font-weight: 400;
   font-style: bold;
   font-size: 55px;
 }
+
+#esquerda p{
+  margin-top: 5px;
+}
+
+.cor{
+  color: #000000; /* Cor do texto preta */
+  text-decoration: none; /* Remover sublinhado padrão de links */
+}
+
+.post-entry h2 a,
+.post-entry h2 a:visited {
+color: rgb(0, 0, 0);
+text-decoration: none;
+font-family: "Kaisei Decol", serif;
+font-weight: 400;
+}
+
+.post-entry p {
+margin: 0;
+font-weight: 400;
+font-family: "Open Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: light;
+font-variation-settings:
+"wdth" 100;
+}
+
+.post-entry h2 a:hover {
+color: grey;
+}
+

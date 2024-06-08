@@ -1,9 +1,27 @@
 {% extends "base.html" %}
+
 {% block content %}
+<div id="meio">
+    <div id="esquerda">
+        <p>Welcome to Django blog!</p>
+        <h2>Discover Inspiration, Insight, and Ideas</h2>
+        {% if user.is_authenticated %}
+        {% else %}
+        <a href="{% url 'signup' %}" class="botao">Post now!</a>
+        {% endif %}
+    </div>
+    <div id="direita">
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="office table">
+    </div>
+</div>
+<div class="posts">
+    <h2>The Writing Desk</h2>
+    <p>Where words come to life</p>
+</div>
 {% for post in post_list %}
 <div class="post-entry">
     <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-<p>{{ post.body }}</p>
+    <p>{{ post.body }}</p>
 </div>
 {% endfor %}
 {% endblock content %}
